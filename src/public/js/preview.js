@@ -1,8 +1,10 @@
-if (window.document.location.hash !== '') {
-  var ipfs = window.ipfsAPI('localhost', '5001')
-  var hash = window.document.location.hash.slice(1)
+// just for testing
+var hash = window.document.location.hash || '#QmU4HVaMoFdFrD3Cbw8ALFw1tt6Xe9i5qdEimZCaNvWvKE'
 
-  console.log(hash)
+if (hash !== '') {
+  var ipfs = window.ipfsAPI('localhost', '5001')
+  hash = hash.slice(1)
+
   ipfs.cat(hash, function (err, res) {
     if (err || !res) {
       return console.error('err', err)
