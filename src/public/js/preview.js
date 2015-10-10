@@ -16,7 +16,7 @@ if (hash !== '') {
       console.log(version)
       if (version.snapshot) {
         var elDiv = document.createElement('div')
-        elDiv.className = 'col-md-4'
+        elDiv.className = 'col-md-4 well'
         var elImg = document.createElement('img')
         elImg.src = baseurl + version.snapshot
         elImg.width = '480'
