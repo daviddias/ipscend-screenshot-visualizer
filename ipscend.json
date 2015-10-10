@@ -1,4 +1,9 @@
 {
-  "versions": [],
+  "versions": [
+    {
+      "hash": "QmaJtFXp1ft4hLznscpRjEufZLTT8YuFn82vWFPeT2rprC",
+      "timestamp": "2015-10-10T20:21:53.056Z"
+    }
+  ],
   "path": "src/public"
 }
