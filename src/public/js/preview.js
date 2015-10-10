@@ -1,5 +1,5 @@
 // just for testing
-var hash = window.document.location.hash || '#QmU4HVaMoFdFrD3Cbw8ALFw1tt6Xe9i5qdEimZCaNvWvKE'
+var hash = window.document.location.hash || '#QmdqoXTW5WGEMiU1QiUnhBMHQpiVnQ8sKSUrN3pb6k3PxF'
 
 if (hash !== '') {
   var ipfs = window.ipfsAPI('localhost', '5001')
@@ -15,9 +15,13 @@ if (hash !== '') {
     res.forEach(function (version) {
       console.log(version)
       if (version.snapshot) {
-        var el = document.createElement('img')
-        el.src = baseurl + version.snapshot
-        div.appendChild(el)
+        var elDiv = document.createElement('div')
+        elDiv.className = 'col-md-4'
+        var elImg = document.createElement('img')
+        elImg.src = baseurl + version.snapshot
+        elImg.width = '480'
+        div.appendChild(elDiv)
+        elDiv.appendChild(elImg)
       }
     })
   })
