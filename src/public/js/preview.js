@@ -15,15 +15,13 @@ if (hash !== '') {
     res.forEach(function (version) {
       console.log(version)
       if (version.snapshot) {
-        var elDiv = document.createElement('div')
-        elDiv.className = 'col-md-4 well'
         var elImg = document.createElement('img')
         elImg.src = baseurl + version.snapshot
         elImg.width = '480'
-        div.appendChild(elDiv)
-        elDiv.appendChild(elImg)
+        div.appendChild(elImg)
       }
     })
+    $('#coverflow').coverflow()
   })
 } else {
   console.log('missing hash')
