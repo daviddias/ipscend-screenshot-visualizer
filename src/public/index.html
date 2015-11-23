@@ -1,20 +1,65 @@
 <!DOCTYPE html>
+<html>
 <head>
-  <title>AWESOME</title>
-  <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css">
-
-  <link rel="stylesheet" type="text/css" href="css/coverflow.css" />
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ipscend visualizer</title>
+	<meta name="description" content="ipsend versions visualizer">
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  <link rel="icon" href="img/ipfs-logo-512-ice.png" type="image/png" />
 </head>
 <body>
 
-  <h1>ipscend</h1>
-  <!-- done with http://coverflowjs.github.io/ -->
-  <div id="coverflow" class="row previews"></div>
+<div class='ipscend-header cf'>
+  <div class='ipscend-logo'>ipscend</div>
+  <div class=ipscend-controls>
+    <button class='js-prev btn btn--success'>Prev</button>
+    <button class='js-next btn btn--success' disabled='disabled'>Next</button>
+  </div>
+</div>
+<div class='view'>
+	<ul class='js-versions versions'></ul>
+</div>
 
-  <script src="js/jquery-2.1.4.min.js"></script>
-  <script src="js/coverflow.min.js"></script>
+<script src="js/underscore.js"></script>
+<script src="js/ipfsapi.min.js"></script>
+<script src="js/timemachine.js"></script>
+<script src="js/ipscend-version-getter.js"></script>
+<script>
+  (function() {
+    var next_button = document.getElementsByClassName('js-next')[0];
+    var prev_button = document.getElementsByClassName('js-prev')[0];
+    var timeMachine = new TimeMachine(document.getElementsByClassName('js-versions')[0], {
+      next_button: next_button,
+      prev_button: prev_button,
+    });
 
-  <script src="js/ipfsapi.min.js"></script>
-  <script src="js/preview.js"></script>
+    var ipscendVersionGetter = new IpscendVersionGetter();
 
+    ipscendVersionGetter.init(function (versions) {
+
+      timeMachine.init(versions);
+
+      next_button.onclick = function() {
+        timeMachine.prev();
+      }
+
+      prev_button.onclick = function() {
+        timeMachine.next();
+      }
+
+      document.onkeydown = function(event) {
+        if (event.keyCode == '37' || event.keyCode == '40') {
+          //left or down  --> previous
+          timeMachine.prev();
+        } else if (event.keyCode == '39' || event.keyCode == '38') {
+          //right or up --> next
+          timeMachine.next();
+        }
+      };
+    });
+  })();
+</script>
 </body>
+</html>
