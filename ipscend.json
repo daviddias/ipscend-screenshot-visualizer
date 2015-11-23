@@ -2,11 +2,33 @@
   "versions": [
     {
       "hash": "QmaJtFXp1ft4hLznscpRjEufZLTT8YuFn82vWFPeT2rprC",
-      "timestamp": "2015-10-10T20:21:53.056Z"
+      "timestamp": "2015-10-10T20:21:53.056Z",
+      "snapshot": "QmZ6kgPEM2NQZAK88kQTG5U7AT8aAjg3RTWeHDshsaMzpv"
     },
     {
       "hash": "Qmcjd2vT5xqJQa5y8i4WEDVPJvgmD4q2t1JQ16mpVbCWNS",
-      "timestamp": "2015-10-20T18:21:49.309Z"
+      "timestamp": "2015-10-20T18:21:49.309Z",
+      "snapshot": "QmbnuoY6BxKBVzVhi1ZaiW641arqYhqoPu9gV8qmhGEsRV"
+    },
+    {
+      "hash": "Qmb6AT2rxwpiQfXivEUAn9zXM6Z2BDZsy4t7w1S9YS8HGK",
+      "timestamp": "2015-11-14T15:45:14.705Z",
+      "snapshot": "QmWLfQSQDv6pzbKA8p8VSdmqSyQb6TurStZCWCa1T6bsNw"
+    },
+    {
+      "hash": "QmSpsQnYhj4uMCUqtVaMnSyv5RT34qYWdhTAi2xLWdDgjB",
+      "timestamp": "2015-11-15T08:05:06.974Z",
+      "snapshot": "QmRHq7EvbgGnHUFgCmPYBo7xtBiGJ5STz8YL5tzjQCBNSR"
+    },
+    {
+      "hash": "QmTVZxZMT5Cx3157fHkv16FY8PHYSJfy2xDhLdXXntkimw",
+      "timestamp": "2015-11-18T18:52:47.959Z",
+      "snapshot": "QmWSzcWAY2cHQFWoJcCqotSqFnTdmtBWhVFoXZvmhQJBVb"
+    },
+    {
+      "hash": "QmU7RZ5sdxTMrhbmAKxfeMF6LpA2565a6yXieRFxP9egcD",
+      "timestamp": "2015-11-23T18:28:15.187Z",
+      "snapshot": "QmSECBpFqXmaNXZCSe5znndaqq27r5uN5BViqz93jFMWKB"
     }
   ],
   "path": "src/public"
